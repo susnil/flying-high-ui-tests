@@ -7,24 +7,24 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<serenity.version>1.1.36</serenity.version>
+		<serenity.version>1.4.0</serenity.version>
 
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>2.53.0</version>
+			<version>3.4.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>htmlunit-driver</artifactId>
-			<version>2.20</version>
+			<version>2.26</version>
 		</dependency>
 		<dependency>
 			<groupId>info.cukes</groupId>
 			<artifactId>cucumber-java</artifactId>
-			<version>1.2.4</version>
+			<version>1.2.5</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -34,12 +34,12 @@
 		<dependency>
 			<groupId>info.cukes</groupId>
 			<artifactId>cucumber-junit</artifactId>
-			<version>1.2.4</version>
+			<version>1.2.5</version>
 		</dependency>
 		<dependency>
 			<groupId>joda-time</groupId>
 			<artifactId>joda-time</artifactId>
-			<version>2.9.4</version>
+			<version>2.9.9</version>
 		</dependency>
 		<dependency>
 			<groupId>net.serenity-bdd</groupId>
@@ -49,7 +49,7 @@
 		<dependency>
 			<groupId>net.serenity-bdd</groupId>
 			<artifactId>serenity-cucumber</artifactId>
-			<version>1.1.8</version>
+			<version>1.1.35</version>
 		</dependency>
 		<dependency>
             <groupId>net.serenity-bdd</groupId>
@@ -59,7 +59,7 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-simple</artifactId>
-			<version>1.6.1</version>
+			<version>1.7.25</version>
 		</dependency>
 		<dependency>
 			<groupId>org.hamcrest</groupId>
@@ -77,7 +77,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>3.6.1</version>
 				<configuration>
 					<encoding>UTF-8</encoding>
 					<source>1.8</source>
