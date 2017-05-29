@@ -2,7 +2,8 @@ package edu.iis.mto.bdd.model;
 
 public enum FrequentFlyerMember {
 
-    Jane("janina.kowalska@acme.com","Janina","Kowalska","s3cr3t"), Joe("janusz.bloger@acme.com","Janusz","Bloger","s3cr3t2");
+    Jane("janina.kowalska@acme.com", "Janina", "Kowalska", "s3cr3t"),
+    Joe("janusz.bloger@acme.com", "Janusz", "Bloger", "s3cr3t2");
 
     private final String email;
     private final String firstName;
