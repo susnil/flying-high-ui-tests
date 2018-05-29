@@ -16,7 +16,7 @@ import cucumber.api.java.en.When;
 public class BookingAFlightSteps {
 
     private WebDriver driver;
-
+    private static String port = System.getProperty("port");
     @Before
     public void init() {
         driver = new FirefoxDriver();
@@ -24,7 +24,7 @@ public class BookingAFlightSteps {
 
     @Given("^I want to book a flight$")
     public void givenIWantToBookAFlight() {
-        driver.get("http://localhost:8080/#/welcome");
+        driver.get("http://localhost:"+port+"/#/welcome");
         driver.findElement(By.linkText("Rezerwacja")).click();
     }
 
