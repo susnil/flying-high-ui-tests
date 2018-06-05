@@ -24,7 +24,7 @@ public class BookingAFlightSteps {
 
     @Given("^I want to book a flight$")
     public void givenIWantToBookAFlight() {
-        driver.get("http://localhost:"+port+"/#/welcome");
+        driver.get("http://localhost:"+port+"#/welcome");
         driver.findElement(By.linkText("Rezerwacja")).click();
     }
 

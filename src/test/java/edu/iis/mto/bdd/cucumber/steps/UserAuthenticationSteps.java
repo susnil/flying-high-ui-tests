@@ -27,7 +27,7 @@ public class UserAuthenticationSteps {
 
     @When("^(.*) authenticates with a valid email address and password$")
     public void whenJaneAuthenticatesWithAValidEmailAddressAndPassword(String user) {
-        driver.get("http://localhost:"+port+"/#/welcome");
+        driver.get("http://localhost:"+port+"#/welcome");
         driver.findElement(By.name("email")).sendKeys("janina.kowalska@acme.com");
         driver.findElement(By.name("password")).sendKeys("s3cr3t");
         driver.findElement(By.name("signin")).click();
@@ -40,7 +40,7 @@ public class UserAuthenticationSteps {
 
     @Given("^(.*) has logged on$")
     public void aUserHasLoggedOnAs(String user) {
-        driver.get("http://localhost:"+port+"/#/welcome");
+        driver.get("http://localhost:"+port+"#/welcome");
         driver.findElement(By.name("email")).sendKeys("janina.kowalska@acme.com");
         driver.findElement(By.name("password")).sendKeys("s3cr3t");
         driver.findElement(By.name("signin")).click();
