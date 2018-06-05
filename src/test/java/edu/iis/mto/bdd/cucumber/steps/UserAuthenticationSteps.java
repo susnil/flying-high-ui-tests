@@ -1,8 +1,10 @@
 package edu.iis.mto.bdd.cucumber.steps;
 
+import static edu.iis.mto.bdd.model.FrequentFlyerMember.Jane;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
 
+import edu.iis.mto.bdd.model.FrequentFlyerMember;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -17,9 +19,11 @@ public class UserAuthenticationSteps {
 
     private WebDriver driver;
     private static String port = System.getProperty("port");
+    private FrequentFlyerMember user;
     @Before
     public void init() {
         driver = new FirefoxDriver();
+        user= Jane;
     }
 
     @Given("^(.*) is a registered Frequent Flyer$")
