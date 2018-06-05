@@ -32,22 +32,23 @@ public class UserAuthenticationSteps {
     @When("^(.*) authenticates with a valid email address and password$")
     public void whenJaneAuthenticatesWithAValidEmailAddressAndPassword(String user) {
         driver.get("http://localhost:"+port+"#/welcome");
-        driver.findElement(By.name("email")).sendKeys("janina.kowalska@acme.com");
-        driver.findElement(By.name("password")).sendKeys("s3cr3t");
+        driver.findElement(By.name("email")).sendKeys(this.user.getEmail());
+        driver.findElement(By.name("password")).sendKeys(this.user.getPassword());
         driver.findElement(By.name("signin")).click();
     }
 
     @Then("^(.*) should be given access to (?:her|his) account$")
     public void thenTheUserShouldBeGivenAccessToAccount(String userName) {
         driver.get("http://localhost:"+port+"#/home");
-        assertThat(driver.findElement(By.id("welcome-message")).getText(), equalTo("Witaj Janina"));
+        String expectedMessage = "Witaj "+this.user.getFirstName();
+        assertThat(driver.findElement(By.id("welcome-message")).getText(), equalTo(expectedMessage));
     }
 
     @Given("^(.*) has logged on$")
     public void aUserHasLoggedOnAs(String user) {
         driver.get("http://localhost:"+port+"#/welcome");
-        driver.findElement(By.name("email")).sendKeys("janina.kowalska@acme.com");
-        driver.findElement(By.name("password")).sendKeys("s3cr3t");
+        driver.findElement(By.name("email")).sendKeys(this.user.getEmail());
+        driver.findElement(By.name("password")).sendKeys(this.user.getPassword());
         driver.findElement(By.name("signin")).click();
     }
 
