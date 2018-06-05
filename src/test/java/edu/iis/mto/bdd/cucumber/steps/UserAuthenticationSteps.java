@@ -35,6 +35,7 @@ public class UserAuthenticationSteps {
 
     @Then("^(.*) should be given access to (?:her|his) account$")
     public void thenTheUserShouldBeGivenAccessToAccount(String userName) {
+        driver.get("http://localhost:"+port+"#/home");
         assertThat(driver.findElement(By.id("welcome-message")).getText(), equalTo("Witaj Janina"));
     }
 
