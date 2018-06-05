@@ -4,6 +4,7 @@ import static edu.iis.mto.bdd.model.FrequentFlyerMember.Jane;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
 
+import edu.iis.mto.bdd.cucumber.pages.HomePage;
 import edu.iis.mto.bdd.model.FrequentFlyerMember;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -40,8 +41,10 @@ public class UserAuthenticationSteps {
     @Then("^(.*) should be given access to (?:her|his) account$")
     public void thenTheUserShouldBeGivenAccessToAccount(String userName) {
         driver.get("http://localhost:"+port+"#/home");
+
+        HomePage homePage= new HomePage(driver);
         String expectedMessage = "Witaj "+this.user.getFirstName();
-        assertThat(driver.findElement(By.id("welcome-message")).getText(), equalTo(expectedMessage));
+        assertThat(homePage.getWelcomeMessage(), equalTo(expectedMessage));
     }
 
     @Given("^(.*) has logged on$")
